@@ -257,7 +257,7 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50,);
+  transform: translate(-50%, -50%,);
   width: 90%;
   max-width: 1100px;
   height: 700px;
@@ -269,7 +269,7 @@ nav {
 
 .modal__half {
   width: 50%;
-  
+
 }
 
 
