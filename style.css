@@ -329,8 +329,9 @@ padding: 6% 0%;
 
 .footer___social--list {
   width: 100%;
-  max-width: 500p;
+  max-width: 500px;
   display: flex;
+  
   justify-content: space-around;
   margin-bottom: 28px 0;
 }
@@ -338,5 +339,6 @@ padding: 6% 0%;
 .footer__social--link, 
 .footer__copyright {
   color: white;
+
 
 }
