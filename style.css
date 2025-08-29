@@ -236,6 +236,12 @@ nav {
   transition: all 600ms ease;
 }
 
+.project__list{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 
 
@@ -332,4 +338,5 @@ padding: 6% 0%;
 .footer__social--link, 
 .footer__copyright {
   color: white;
+
 }
