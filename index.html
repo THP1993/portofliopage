@@ -9,7 +9,19 @@
       src="https://kit.fontawesome.com/7086f308a1.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ldU_gvrzmfKaA-r8G",
+      });
+   })();
+</script>
   </head>
+
   <body>
     <section id="landing-page">
       <nav>
@@ -71,15 +83,67 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fas fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
       <div class="modal">
-        <div class="modal__half modal__about">Here's a bit about me.</div>
-        <div class="modal__half modal__contact">Lets have a chat!</div>
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a little bit about <b class="red">me.</b>  
+          </h3>
+          <h4 class="moad__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+          <p class="modal__para">My name is <b class ="red">Tanner Heitz</b>; And I am a frontend engineer <b class="red">passionate</b>  about <b class="red">clean</b> code.
+            <br>
+            My <b class="red">goal</b> is to provide my clientele with web pages containing <b class="red">responsive design</b>, while turning ideas into <b class="red">intuitive, fast, and user-friendly websites</b>.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png">
+            <span class="language__name">HTML</span>
+            </figure> 
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png">
+            <span class="language__name">CSS</span>
+            </figure> 
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png">
+            <span class="language__name">JavaScript</span>
+            </figure> 
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!  
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I am currently open to new opportunities; Lets create together!
+          </h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" ></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" ></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text" ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it my way</button>
+          </form> 
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon!
+          </div>
+        </div>
+        <i class="fas fa-times modal__exit click"> </i>
       </div>
     </section>
     <section id="projects">
@@ -177,8 +241,6 @@
     <footer>
       <div class="container">
         <div class="row footer__row">
-
-       
         <figure>
           <img id="personal__logo--footer" src="assets/THfelogo.png" />
         </figure>
@@ -189,7 +251,6 @@
             link__hover-effect--white
           ">
           Github
-
           </a>
           <a href="#"class="
             footer__social--link 
@@ -197,7 +258,6 @@
             link__hover-effect--white
           ">
          linkedIn
-
           </a>
           <a href="#"class="
             footer__social--link 
@@ -205,7 +265,6 @@
             link__hover-effect--white
           ">
           Contact
-
           </a>
           <a href="#"class="
             footer__social--link 
@@ -213,13 +272,11 @@
             link__hover-effect--white
           ">
           Resume
-
           </a>
         </div>
         <div class="footer__copyright">
           Copyright  © 2025 Tanner Heitz 
         </div>
-        
       </div>
     </footer>
   </body>
