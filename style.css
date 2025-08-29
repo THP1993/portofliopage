@@ -11,6 +11,8 @@ li {
   list-style-type: none;
 }
 
+
+
 section {
   background-color: rgb(245, 245, 245);
 }
@@ -221,6 +223,7 @@ nav {
   transition: all 600ms ease;
 }
 
+
 .project__wrapper {
 position: relative;
 border-radius: 20px;
@@ -232,7 +235,7 @@ overflow: hidden;
   position: absolute;
   top: 50%;
   left: 90px;
-  transform: translateY(-50%);
+  transform: translateY(1000%);
   transition: opacity 300ms, transform 450ms ease;
   color: rgb(255, 255, 255);
   max-width: 550px;
@@ -244,7 +247,7 @@ transform: translateY(-50%);
 }
 
 .project__wrapper:hover .project__wrapper--bg {
-  opacity: 0.07;
+  opacity: 0.7;
 }
 
 .project__wrapper:hover .project__img {
