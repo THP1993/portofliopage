@@ -23,7 +23,7 @@
   </head>
 
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <img id="personal-logo" src="./assets/thFESlogo.png" alt="" />
@@ -43,14 +43,14 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -68,8 +68,9 @@
             I'm a <b class="red">Frontend Software Engineer</b> with a strong
             passion for building web applications wth great user experiences.
             <br />
-            Heres a bit more <b class="red">about me.</b>
+            Heres a bit more <b class="red" onclick="toggleModal()">about me.</b>
           </p>
+          
           <div class="social__list">
             <a href="#" target="_blank" class="social__link click">
               <i class="fab fa-linkedin-in"></i>
@@ -94,7 +95,7 @@
           <h3 class="modal__title modal__title--about">
             Here's a little bit about <b class="red">me.</b>  
           </h3>
-          <h4 class="moad__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+          <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
           <p class="modal__para">My name is <b class ="red">Tanner Heitz</b>; And I am a frontend engineer <b class="red">passionate</b>  about <b class="red">clean</b> code.
             <br>
             My <b class="red">goal</b> is to provide my clientele with web pages containing <b class="red">responsive design</b>, while turning ideas into <b class="red">intuitive, fast, and user-friendly websites</b>.
@@ -115,6 +116,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click"> </i>
           <h3 class="modal__title modal__title--contact">
             Let's have a chat!  
           </h3>
@@ -143,8 +145,16 @@
             Thanks for the message! Looking forward to speaking to you soon!
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"> </i>
       </div>
+      <img src="assets/semi circle.svg" class="shape shape--0">
+      <img src="assets/squiggly.svg" class="shape shape--1">
+      <img src="assets/circle.svg" class="shape shape--2">
+      <img src="assets/triangle.svg" class="shape shape--3">
+      <img src="assets/circle.svg" class="shape shape--4">
+      <img src="assets/squiggly.svg" class="shape shape--5">
+      <img src="assets/circle.svg" class="shape shape--6">
+      <img src="assets/triangle.svg" class="shape shape--7">
+      <img src="assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
       <div class="container">

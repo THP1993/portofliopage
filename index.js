@@ -2,6 +2,36 @@
 // service_opvlhdx"
 // ldU_gvrzmfKaA-r8G
 
+
+let isModalOpen = false;
+let contrastToggle = false;
+
+
+function moveBackground(event){
+  const shapes = document.querySelectorAll(".shape");
+  const x = event.clientX;
+  const y = event.clientY;
+ 
+  for (let i = 0; i < shapes.length; ++i) {
+    shapes[i].style.transform = `translate (${x}px, ${y}px)`
+  }
+}
+
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+document.body.classList += " dark-theme"
+  }
+  else {
+    document.body.classList.remove("dark-theme")
+  }
+  
+}
+
+
+
+
+
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -26,12 +56,14 @@ function contact(event) {
 }
 
 
-let isModalOpen = false;
 function toggleModal() {
-isModalOpen = !isModalOpen;
+
     if (isModalOpen) {
+        isModalOpen = false
         return document.body.classList.remove("modal--open");
         
     }
+    isModalOpen = !isModalOpen;
     document.body.classList += " modal--open";
 }
+
